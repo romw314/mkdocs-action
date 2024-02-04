@@ -38,7 +38,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Build with MkDocs
-      uses: romw314/mkdocs-action@v1
+      uses: romw314/mkdocs-action@v2
 ```
 
 ### Deploy to GitHub Pages
@@ -53,7 +53,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Build with MkDocs
-      uses: romw314/mkdocs-action@v1
+      uses: romw314/mkdocs-action@v2
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1.0.9
   deploy:
