@@ -4,6 +4,6 @@ RUN python3 -m pip install mkdocs mkdocs-material mkdocs-git-revision-date-local
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN chmod +x /entrypoint.sh
+RUN chmod -v 755 /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
