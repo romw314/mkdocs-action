@@ -1,0 +1,20 @@
+name: 'MkDocs Build'
+description: 'Build your MkDocs projects'
+inputs:
+  config-file:
+    description: 'The path to the MkDocs configuration file'
+    required: false
+    default: 'mkdocs.yml'
+  output-dir:
+    description: 'The directory to output the HTML site to, relative to workdir (see below)'
+    required: false
+    default: '_site'
+  workdir:
+    description: 'The root directory of your project (which contains the `docs` dir)'
+    required: false
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.config-file }} ${{ inputs.output-dir }} ${{ inputs.workdir }}
