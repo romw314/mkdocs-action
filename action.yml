@@ -17,7 +17,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.config-file }} ${{ inputs.output-dir }} ${{ inputs.workdir }}
+    - ${{ inputs.config-file }}
+    - ${{ inputs.output-dir }}
+    - ${{ inputs.workdir }}
 branding:
   icon: 'book'
   color: 'blue'
